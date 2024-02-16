@@ -9,19 +9,19 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/cliente")
+@RequestMapping("/api/clientes")
 public class ClientesController {
 
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping("/guardar")
+    @GetMapping()
     public List<ClienteModel> listCLientes(){
-        return clienteService.listClientes();
+        return clienteService.listCliente();
     }
 
-    @PostMapping("/listar")
-    public ClienteModel guardarCliente(){
-        return clienteService.saveCliente();
+    @PostMapping()
+    public ClienteModel guardarCliente(ClienteModel cliente){
+        return clienteService.saveClientes(cliente);
     }
 }
