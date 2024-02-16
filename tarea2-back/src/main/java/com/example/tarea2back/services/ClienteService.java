@@ -10,6 +10,7 @@ import java.util.List;
 @Service
 public class ClienteService {
 
+    @Autowired
     private ClientesRepository clientesRepository;
 
     public ClienteModel saveClientes(ClienteModel cliente){
