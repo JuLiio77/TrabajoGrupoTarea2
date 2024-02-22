@@ -10,27 +10,16 @@ import { FormGroup } from '@angular/forms';
 export class ListarClientesComponent implements OnInit{
   clientes!: any[];
 
-  form: FormGroup
+  constructor(private clienteService: ClienteService){}
+  
   ngOnInit(): void {
    this.obtenerClientes();
 
   }
 
-  constructor(private clienteService: ClienteService, private ){}
-
-/*   obtenerClientes(): void {
+   obtenerClientes(): void {
     this.clienteService.obtenerClientes().subscribe(clientes => this.clientes = clientes);
-  } */
+  } 
 
-  obtenerClientes(){
-    this.clienteService.obtenerClientes().subscribe({
-      next: res =>{
-        console.log(res)
-      },
-      error: err =>{
-        console.log(err)
-      }
-    })
-  }
 
 }

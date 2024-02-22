@@ -16,11 +16,9 @@ export class AgregarClienteComponent {
     this.clienteService.agregarCliente(this.nuevoCliente).subscribe(
       (respuesta) => {
         console.log('Cliente agregado correctamente:', respuesta);
-       
       },
       (error) => {
         console.error('Error al agregar cliente:', error);
-        
       }
     );
     

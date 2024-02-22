@@ -15,12 +15,12 @@ public class ClientesController {
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping()
+    @GetMapping("/list")
     public List<ClienteModel> listCLientes(){
         return clienteService.listCliente();
     }
 
-    @PostMapping()
+    @PostMapping("/guardar")
     public ClienteModel guardarCliente(@RequestBody ClienteModel clienteModel){
         return clienteService.saveClientes(clienteModel);
     }
