@@ -16,7 +16,7 @@ public class ClienteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private Number telefono;
+    private Integer telefono;
     private String email;
 
 
