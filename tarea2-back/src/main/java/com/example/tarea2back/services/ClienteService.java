@@ -13,8 +13,8 @@ public class ClienteService {
     @Autowired
     private ClientesRepository clientesRepository;
 
-    public ClienteModel saveClientes(ClienteModel cliente){
-        return clientesRepository.save(cliente);
+    public ClienteModel saveClientes(ClienteModel clienteModel){
+        return clientesRepository.save(clienteModel);
     }
 
     public List<ClienteModel> listCliente() {

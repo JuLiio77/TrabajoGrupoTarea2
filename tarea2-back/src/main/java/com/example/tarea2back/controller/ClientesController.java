@@ -21,7 +21,7 @@ public class ClientesController {
     }
 
     @PostMapping()
-    public ClienteModel guardarCliente(ClienteModel cliente){
-        return clienteService.saveClientes(cliente);
+    public ClienteModel guardarCliente(ClienteModel clienteModel){
+        return clienteService.saveClientes(clienteModel);
     }
 }
