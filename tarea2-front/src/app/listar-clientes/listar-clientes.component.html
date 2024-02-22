@@ -1,5 +1,7 @@
 <h1>Listado de Clientes</h1>
-<ul>
-  <li *ngFor="let cliente of clientes">{{ cliente.nombre }}</li>
+<ul *ngFor="let cliente of clientes">
+  <li >{{ cliente.nombre }}</li>
+  <li >{{ cliente.telefono }}</li>
+  <li >{{ cliente.email }}</li>
 </ul>
 
