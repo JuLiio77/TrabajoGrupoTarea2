@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("{*}")
 @RequestMapping("/api/clientes")
 public class ClientesController {
 
@@ -20,8 +20,8 @@ public class ClientesController {
         return clienteService.listCliente();
     }
 
-    @PostMapping()
-    public ClienteModel guardarCliente(ClienteModel cliente){
+    @PostMapping("/guardar")
+    public ClienteModel guardarCliente(@RequestBody ClienteModel cliente){
         return clienteService.saveClientes(cliente);
     }
 }
